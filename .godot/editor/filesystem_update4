@@ -1,0 +1,17 @@
+res://main.tscn
+res://world.tscn
+res://Player/player.tscn
+res://Chicken/chicken.tscn
+res://BG.tscn
+res://Chicken/chicken.gd
+res://KillCounter.gd
+res://Player/player.gd
+res://VictoryMessage.gd
+res://Mobs.gd
+res://world.gd
+res://main.gd
+res://Timer.gd
+res://Welcome.gd
+res://Button.gd
+res://End_Credits.tscn
+res://BG.gd

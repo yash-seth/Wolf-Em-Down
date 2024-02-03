@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=3 uid="uid://diee6q3qj330g"]
+
+[ext_resource type="Texture2D" uid="uid://bqxddilhi618t" path="res://BG.jpg" id="1_cqexx"]
+[ext_resource type="Script" path="res://BG.gd" id="1_xtlww"]
+[ext_resource type="Texture2D" uid="uid://dujn8v5xcxtv7" path="res://moon.png" id="2_4w6f4"]
+
+[node name="BG" type="ParallaxBackground"]
+script = ExtResource("1_xtlww")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1151, 0)
+
+[node name="Bg" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(575.5, 324.5)
+scale = Vector2(0.384333, 0.3245)
+texture = ExtResource("1_cqexx")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.7, 1)
+motion_mirroring = Vector2(1100, 0)
+
+[node name="Moon" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(235, 199)
+scale = Vector2(0.529302, 0.46811)
+texture = ExtResource("2_4w6f4")
+
+[node name="Moon4" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(751, 404)
+rotation = -2.27416
+scale = Vector2(0.529302, 0.46811)
+texture = ExtResource("2_4w6f4")
+
+[node name="Moon2" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(499, 183)
+rotation = -4.78744
+scale = Vector2(0.29707, 0.262402)
+texture = ExtResource("2_4w6f4")
+
+[node name="Moon5" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(948, 150)
+rotation = -3.47146
+scale = Vector2(0.367244, 0.342128)
+texture = ExtResource("2_4w6f4")
+
+[node name="Moon3" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(310, 511)
+rotation = 2.6337
+scale = Vector2(0.229064, 0.233602)
+texture = ExtResource("2_4w6f4")

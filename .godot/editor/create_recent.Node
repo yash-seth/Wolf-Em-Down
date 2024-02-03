@@ -1,0 +1,15 @@
+Button
+Label
+Node2D
+Timer
+CanvasLayer
+CollisionShape2D
+Area2D
+ParallaxLayer
+ParallaxBackground
+AnimationTree
+AnimationPlayer
+Camera2D
+AnimatedSprite2D
+CharacterBody2D
+Panel

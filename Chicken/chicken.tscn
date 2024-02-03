@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=3 uid="uid://c0xctsgh6rf0c"]
+
+[ext_resource type="Texture2D" uid="uid://dxhubp05j6iug" path="res://Chicken.png" id="1_dqtbb"]
+[ext_resource type="Script" path="res://Chicken/chicken.gd" id="1_f18mw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f2ywa"]
+radius = 13.1529
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e4vxa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_dqtbb")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tlcwp"]
+radius = 130.035
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6t2kc"]
+size = Vector2(38, 34)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_f18mw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 10)
+shape = SubResource("CircleShape2D_f2ywa")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, 10)
+scale = Vector2(0.0553306, 0.0494747)
+sprite_frames = SubResource("SpriteFrames_e4vxa")
+animation = &"Idle"
+
+[node name="PlayerDetection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetection"]
+position = Vector2(0, 11)
+shape = SubResource("CircleShape2D_tlcwp")
+
+[node name="KillChicken" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillChicken"]
+position = Vector2(-1, 9)
+shape = SubResource("RectangleShape2D_6t2kc")
+
+[connection signal="body_entered" from="PlayerDetection" to="." method="_on_player_detection_body_entered"]
+[connection signal="body_exited" from="PlayerDetection" to="." method="_on_player_detection_body_exited"]
+[connection signal="body_entered" from="KillChicken" to="." method="_on_kill_chicken_body_entered"]

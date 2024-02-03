@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://cv77pj8g7ufhf"]
+
+[ext_resource type="PackedScene" uid="uid://diee6q3qj330g" path="res://BG.tscn" id="1_w70rr"]
+[ext_resource type="Script" path="res://Button.gd" id="2_jgwsl"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="BG" parent="." instance=ExtResource("1_w70rr")]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 430.0
+offset_top = 267.0
+offset_right = 790.0
+offset_bottom = 393.0
+text = "Thank you for playing! Protostar out ;)"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 489.0
+offset_top = 431.0
+offset_right = 665.0
+offset_bottom = 480.0
+text = "Return to main menu"
+script = ExtResource("2_jgwsl")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

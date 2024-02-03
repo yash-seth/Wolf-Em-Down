@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxev6hflnphp3"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_rxfpu"]
+[ext_resource type="PackedScene" uid="uid://diee6q3qj330g" path="res://BG.tscn" id="2_itore"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_rxfpu")
+
+[node name="Start" type="Button" parent="."]
+offset_left = 492.0
+offset_top = 144.0
+offset_right = 645.0
+offset_bottom = 246.0
+text = "Start"
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 492.0
+offset_top = 332.0
+offset_right = 645.0
+offset_bottom = 434.0
+text = "Quit"
+
+[node name="BG" parent="." instance=ExtResource("2_itore")]
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
