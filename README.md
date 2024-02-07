@@ -8,6 +8,12 @@ A side scrolling objective-based game developed using Godot Game Engine and GDSc
 - Custom drawn assets for Wolf and Chicken models
 - Parallax Background
 
+# To run on web browser
+1. `cd` into `Web` folder
+2. Run a node server to host the file using the following command with required flags set `npx local-web-server --https --cors.embedder-policy "require-corp" --cors.opener-policy "same-origin" --directory
+ "."`
+3. Go to `https://127.0.0.1:8000/` to access the game
+
 # Samples
 ## Main Menu
 ![image](https://github.com/yash-seth/Wolf-Em-Down/assets/71393551/a82d04c5-8e3e-4395-907a-5bdd58637600)
